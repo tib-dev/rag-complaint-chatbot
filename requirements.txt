@@ -1,0 +1,36 @@
+# Core Libraries
+numpy
+pandas
+pyyaml
+python-dotenv
+joblib
+sentence-transformers
+transformers
+torch
+faiss-cpu
+chromadb
+langchain
+langchain-community
+dvc
+dvc-s3
+matplotlib
+seaborn
+streamlit
+gradio
+
+# Development and Testing
+pytest
+pytest-cov
+black
+isort
+flake8
+pre-commit
+mypy
+codecov
+
+# Optional for enhanced string matching
+rapidfuzz
+
+# Notebooks
+jupyter
+ipykernel
