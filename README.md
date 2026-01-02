@@ -186,10 +186,9 @@ rag-complaint-chatbot/
 
 ---
 
-## MLOps & Engineering Practices
+## Engineering Practices
 
 - **Data Versioning:** DVC tracks raw and processed datasets, embeddings, and vector stores
-- **Experiment Reproducibility:** Parameters stored in `params.yaml`
 - **Containerization:** Docker & docker-compose for easy deployment
 - **Testing:** Unit and integration tests for preprocessing, chunking, embedding, and RAG pipeline
 
