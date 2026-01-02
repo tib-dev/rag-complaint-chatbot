@@ -84,3 +84,4 @@ dist/
 # Docker
 # ===============================
 docker/.env
+structure.md
