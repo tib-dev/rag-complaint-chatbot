@@ -1,0 +1,145 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-complaint-chatbot"
+version = "0.1.0"
+description = "Retrieval-Augmented Generation chatbot for CFPB consumer complaints"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Tibebu K.", email = "wise.tibec@gmail.com" }
+]
+
+keywords = [
+    "rag",
+    "nlp",
+    "llm",
+    "chatbot",
+    "consumer-complaints",
+    "cfpb",
+    "vector-database",
+    "retrieval-augmented-generation",
+    "mlops",
+    "dvc"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development :: Libraries"
+]
+
+dependencies = [
+    # Core
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "python-dotenv",
+    "joblib",
+
+    # NLP / Embeddings
+    "sentence-transformers",
+    "transformers",
+    "torch",
+
+    # Vector stores
+    "faiss-cpu",
+    "chromadb",
+
+    # RAG orchestration
+    "langchain",
+    "langchain-community",
+
+    # Data versioning
+    "dvc",
+    "dvc-s3",
+
+    # Visualization / analysis
+    "matplotlib",
+    "seaborn",
+
+    # UI
+    "streamlit",
+    "gradio"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+    "pre-commit",
+    "mypy",
+    "codecov"
+]
+
+notebooks = [
+    "jupyter",
+    "ipykernel"
+]
+
+fast = [
+    "rapidfuzz"
+]
+
+[project.urls]
+Homepage = "https://github.com/tib-dev/rag-complaint-chatbot"
+Documentation = "https://github.com/tib-dev/rag-complaint-chatbot#readme"
+Source = "https://github.com/tib-dev/rag-complaint-chatbot"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rag_chatbot*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+exclude = '''
+/(
+    \.venv
+  | \.git
+  | \.dvc
+  | data
+  | vector_store
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+src_paths = ["src"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".venv",
+    ".git",
+    "__pycache__",
+    ".dvc",
+    "data",
+    "vector_store"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra --cov=rag_chatbot"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["rag_chatbot"]
+omit = [
+    "tests/*",
+    "src/rag_chatbot/ui/*"
+]
