@@ -1,0 +1,8 @@
+stages:
+  preprocess:
+    cmd: python scripts/run_preprocessing.py -- complaints.csv
+    deps:
+      - scripts/run_preprocessing.py
+      - data/raw/complaints.csv
+    outs:
+      - data/interim/complaints_clean.parquet
