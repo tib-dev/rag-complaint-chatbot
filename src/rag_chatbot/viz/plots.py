@@ -1,3 +1,4 @@
+import matplotlib.pylab as plt
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -73,4 +74,23 @@ def plot_narrative_presence(df, column="Consumer complaint narrative"):
         colors=['skyblue', 'salmon']
     )
     plt.title("Complaints With vs Without Narratives")
+    plt.show()
+
+
+def plot_complaint_distribution_clean(df, title="Distribution of Complaints by Product Category"):
+    """
+    Plots number of complaints per product.
+    """
+    product_counts = df['product_category'].value_counts()
+
+    plt.figure(figsize=(12, 6))
+    sns.set_style("whitegrid")
+    sns.barplot(x=product_counts.index,
+                y=product_counts.values, palette="viridis")
+
+    plt.title(title, fontsize=14)
+    plt.xlabel("Product", fontsize=12)
+    plt.ylabel("Number of Complaints", fontsize=12)
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
     plt.show()
