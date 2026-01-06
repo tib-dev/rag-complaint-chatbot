@@ -8,3 +8,5 @@ paths:
   reports:
     reports_dir: "reports"
     plots_dir: "reports/plots"
+  vector_store
+    vector_store_dir: "vector_store"  
