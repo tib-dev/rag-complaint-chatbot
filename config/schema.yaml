@@ -40,19 +40,12 @@ filters:
     - Money transfers
   product_category_mapping:
     # --- Credit card ---
-    - Credit reporting or other personal consumer reports: Credit card
-    - Credit reporting, credit repair services, or other personal consumer reports: Credit card
-    - Credit reporting: Credit card
     - Credit card": Credit card
     - Credit card or prepaid card: Credit card
-    - Debt or credit management: Credit card
 
     # --- Savings account ---
     - Checking or savings account: Savings account
-    - Bank account or service: Savings account
-    - Consumer loan: Personal loan
-    - Student loan: Personal loan
-    - Vehicle loan or lease: Personal loan
+ 
     # --- Money transfers ---
     - Money transfer, virtual currency, or money service: Money transfers
     - Money transfers: Money transfers
