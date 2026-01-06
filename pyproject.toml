@@ -49,7 +49,7 @@ dependencies = [
     "sentence-transformers",
     "transformers",
     "torch",
-    ""hf_xet,
+    "hf_xet",
 
     # Vector stores
     "faiss-cpu",
