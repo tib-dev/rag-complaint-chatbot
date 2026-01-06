@@ -1,0 +1,55 @@
+columns:
+  mapping:
+    Complaint ID: complaint_id
+    Product: product_category
+    Sub-product: product
+    Issue: issue
+    Sub-issue: sub_issue
+    Consumer complaint narrative: consumer_complaint_narrative
+    Company: company
+    State: state
+    Date received: date_received
+
+  required:
+    - complaint_id
+    - product_category
+    - product
+    - issue
+    - sub_issue
+    - consumer_complaint_narrative
+    - company
+    - state
+    - date_received
+
+types:
+  complaint_id: int
+  product_category: str
+  product: str
+  issue: str
+  sub_issue: str
+  consumer_complaint_narrative: str
+  company: str
+  state: str
+  date_received: datetime
+
+filters:
+  allowed_product_categories:
+    - Credit card
+    - Personal loan
+    - Savings account
+    - Money transfers
+  product_category_mapping:
+    # --- Credit card ---
+    - Credit card": Credit card
+    - Credit card or prepaid card: Credit card
+
+    # --- Savings account ---
+    - Checking or savings account: Savings account
+ 
+    # --- Money transfers ---
+    - Money transfer, virtual currency, or money service: Money transfers
+    - Money transfers: Money transfers
+
+    # --- Personal loan ---
+    - Payday loan, title loan, or personal loan: Personal loan
+    - Payday loan, title loan, personal loan, or advance loan: Personal loan
