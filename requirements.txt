@@ -10,6 +10,8 @@ torch
 faiss-cpu
 chromadb
 langchain
+langchain-text-splitters
+hf_xet
 langchain-community
 dvc
 dvc-s3

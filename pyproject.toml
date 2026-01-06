@@ -49,6 +49,7 @@ dependencies = [
     "sentence-transformers",
     "transformers",
     "torch",
+    "hf_xet",
 
     # Vector stores
     "faiss-cpu",
@@ -56,7 +57,9 @@ dependencies = [
 
     # RAG orchestration
     "langchain",
+    "langchain-text-splitters",
     "langchain-community",
+
 
     # Data versioning
     "dvc",
