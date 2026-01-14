@@ -6,3 +6,10 @@ stages:
       - data/raw/complaints.csv
     outs:
       - data/interim/complaints_clean.parquet
+  rag_pipeline:
+    cmd: python scripts/launch_ui.py -- faiss.index metadata.parquet
+    deps:
+      -scripts/launch_ui.py
+      - vectore_store/faiss/metadata.parquet
+          
+      
