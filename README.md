@@ -232,21 +232,12 @@ pip install -e .
 dvc repro
 ```
 
-### Launch UI (Gradio / Streamlit)
+### Launch UI 
 
 ```bash
-python scripts/launch_ui.py
+python app.py
 ```
 
-### Docker
-
-Build and run container:
-
-```bash
-docker-compose up --build
-```
-
----
 
 ## Technologies Used
 
