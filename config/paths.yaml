@@ -1,4 +1,3 @@
-
 paths:
   data:
     data_dir: "data"
@@ -8,5 +7,8 @@ paths:
   reports:
     reports_dir: "reports"
     plots_dir: "reports/plots"
-  vector_store
-    vector_store_dir: "vector_store"  
+  vector_store:
+    fiass_dir: "vector_store/fiass"
+    chroma_dir: "vector_store/chroma"
+  model:
+    model_dir: "models/"  
