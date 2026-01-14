@@ -6,6 +6,7 @@ python-dotenv
 joblib
 sentence-transformers
 transformers
+ctransformers
 torch
 faiss-cpu
 chromadb

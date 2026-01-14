@@ -28,7 +28,7 @@ keywords = [
 ]
 
 classifiers = [
-    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3 :: Only",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -48,6 +48,7 @@ dependencies = [
     # NLP / Embeddings
     "sentence-transformers",
     "transformers",
+    "ctransformers",
     "torch",
     "hf_xet",
 

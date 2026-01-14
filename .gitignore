@@ -86,3 +86,4 @@ dist/
 docker/.env
 structure.md
 vector_store/
+models/
