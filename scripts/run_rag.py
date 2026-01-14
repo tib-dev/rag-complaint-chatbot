@@ -4,6 +4,7 @@ from rag_chatbot.rag.llm import get_llm
 from rag_chatbot.prompt.prompts import get_prompt
 from rag_chatbot.rag.pipeline import RAGPipeline
 from rag_chatbot.core.settings import settings
+from rag_chatbot.ui.app_gradio import launch_ui
 
 persist_path = settings.paths.VECTOR_STORE["fiass_dir"]
 
@@ -22,3 +23,6 @@ while True:
     if q.lower() == "exit":
         break
     print(rag.run(q)["answer"])
+
+
+launch_ui(rag)
