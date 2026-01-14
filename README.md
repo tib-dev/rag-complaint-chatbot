@@ -123,53 +123,9 @@ rag-complaint-chatbot/
 
 ## Architecture
 
-```text
-+---------------------------+
-| Raw Complaint Data        |
-| - CFPB complaints CSV     |
-| Location: data/raw/       |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-| Data Loader               |
-| src/rag_chatbot/data      |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-| Preprocessing             |
-| - Text cleaning           |
-| - Normalization           |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-| Chunking & Embeddings     |
-| - TextSplitter            |
-| - Embeddings via OpenAI   |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-| Vector Store              |
-| - FAISS / Chroma          |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-| RAG Pipeline              |
-| - Retriever               |
-| - Generator               |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-| UI / API                  |
-| - Gradio / Streamlit      |
-| - FastAPI for production  |
-+---------------------------+
-```
+
+<img width="980" height="980" alt="image" src="https://github.com/user-attachments/assets/b4e0a48d-6ea9-40a2-879b-372c22f38901" />
+
 
 ---
 
